@@ -1,7 +1,6 @@
 package jiconfont.icons;
 
 import jiconfont.AbstractIconCodeGenerator;
-import org.omg.CORBA.StringSeqHelper;
 
 import java.net.URI;
 import java.nio.charset.Charset;
@@ -31,16 +30,16 @@ import java.util.*;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-public class IconicFillGenerator extends AbstractIconCodeGenerator {
+public class IconicGenerator extends AbstractIconCodeGenerator {
 
-  public IconicFillGenerator() {
-    super("IF_");
+  public IconicGenerator() {
+    super("I_");
   }
 
   public void start() {
     try {
       URI uri =
-        IconicFillGenerator.class.getResource("/iconic_fill.css.scss").toURI();
+        IconicGenerator.class.getResource("/iconic_fill.css.scss").toURI();
       Path path = Paths.get(uri);
       List<String> list = Files.readAllLines(path, Charset.forName("UTF-8"));
 
@@ -65,8 +64,8 @@ public class IconicFillGenerator extends AbstractIconCodeGenerator {
     // https://github.com/somerandomdude/Iconic/blob/master/font/Iconic%20Fill/iconic_fill.css.scss
     // into resources directory
     // TODO read the file using http
-    IconicFillGenerator iconicFillGenerator = new IconicFillGenerator();
-    iconicFillGenerator.start();
+    IconicGenerator iconicGenerator = new IconicGenerator();
+    iconicGenerator.start();
   }
 
 }

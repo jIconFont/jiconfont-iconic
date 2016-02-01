@@ -25,7 +25,7 @@ import java.io.InputStream;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-public enum IconicFill implements IconCode {
+public enum Iconic implements IconCode {
 
   APERTURE('\uE026'),
   APERTURE_ALT('\uE00C'),
@@ -181,7 +181,7 @@ public enum IconicFill implements IconCode {
 
   private final char character;
 
-  IconicFill(char character) {
+  Iconic(char character) {
     this.character = character;
   }
 
@@ -192,12 +192,12 @@ public enum IconicFill implements IconCode {
 
   @Override
   public String getFontFamily() {
-    return "IconicFill";
+    return "Iconic";
   }
 
   @Override
   public InputStream getFontInputStream() {
-    return IconicFill.class.getResourceAsStream("/fonts/iconic_fill.ttf");
+    return Iconic.class.getResourceAsStream("/fonts/iconic_fill.ttf");
   }
 
 }
