@@ -1,6 +1,7 @@
 package jiconfont.icons;
 
 import jiconfont.IconCode;
+import jiconfont.IconFont;
 
 import java.io.InputStream;
 
@@ -195,9 +196,18 @@ public enum Iconic implements IconCode {
         return "Iconic";
     }
 
-    @Override
-    public InputStream getFontInputStream() {
-        return Iconic.class.getResourceAsStream("/fonts/iconic_fill.ttf");
+    public static IconFont getIconFont(){
+        return new IconFont() {
+            @Override
+            public String getFontFamily() {
+                return "Iconic";
+            }
+
+            @Override
+            public InputStream getFontInputStream() {
+                return Iconic.class.getResourceAsStream("/fonts/iconic_fill.ttf");
+            }
+        };
     }
 
 }
