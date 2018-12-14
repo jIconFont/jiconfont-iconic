@@ -1,4 +1,4 @@
-package jiconfont.icons;
+package jiconfont.icons.openiconic;
 
 import jiconfont.IconCode;
 import jiconfont.IconFont;
