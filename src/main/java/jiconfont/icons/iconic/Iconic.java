@@ -1,4 +1,4 @@
-package jiconfont.icons;
+package jiconfont.icons.iconic;
 
 import jiconfont.IconCode;
 import jiconfont.IconFont;
@@ -205,7 +205,7 @@ public enum Iconic implements IconCode {
 
             @Override
             public InputStream getFontInputStream() {
-                return Iconic.class.getResourceAsStream("/fonts/iconic_fill.ttf");
+                return Iconic.class.getResourceAsStream("/fonts/iconic/iconic_fill.ttf");
             }
         };
     }
